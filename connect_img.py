@@ -6,9 +6,7 @@
 @File    : connect_img.py
 """
 from PIL import Image
-from os import listdir
 
-# f = Image.open('asset1/003.bmp')
 order = [8, 14, 12, 15, 3, 10, 2, 16, 1, 4, 5, 9, 13, 18, 11, 7, 17, 0, 6]
 img_ordered = []
 for i in order:
