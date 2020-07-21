@@ -20,7 +20,6 @@ for i in order:
         img_ordered.append(im)
 width, height = img_ordered[0].size
 result = Image.new(img_ordered[0].mode, (width * len(img_ordered), height))
-print(result.size)
 for j, jm in enumerate(img_ordered):
     result.paste(jm, box=(j * width, 0))
 result.save('img_after_connect.bmp')
