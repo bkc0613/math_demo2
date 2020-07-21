@@ -6,8 +6,6 @@
 @File    : picture_to_matrix.py
 """
 import cv2
-import os
-import numpy as np
 
 for i in range(0, 209):
     if i < 10:
