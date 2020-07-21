@@ -7,17 +7,17 @@
 """
 from PIL import Image
 
-order = [8, 14, 12, 15, 3, 10, 2, 16, 1, 4, 5, 9, 13, 18, 11, 7, 17, 0, 6]
+order = [3, 6, 2, 7, 15, 18, 11, 0, 5, 1, 9, 13, 10, 8, 12, 14, 17, 16, 4]
 img_ordered = []
 for i in order:
     if i < 10:
-        im = Image.open('asset1/00{}.bmp'.format(str(i)))
+        im = Image.open('asset2/00{}.bmp'.format(str(i)))
         img_ordered.append(im)
     else:
-        im = Image.open('asset1/0{}.bmp'.format(str(i)))
+        im = Image.open('asset2/0{}.bmp'.format(str(i)))
         img_ordered.append(im)
 width, height = img_ordered[0].size
 result = Image.new(img_ordered[0].mode, (width * len(img_ordered), height))
 for j, jm in enumerate(img_ordered):
     result.paste(jm, box=(j * width, 0))
-result.save('img_after_connect.bmp')
+result.save('img_after_connect_Eg.bmp')
